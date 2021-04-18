@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <link rel="stylesheet" href="APlayer.min.css">
+  <script src="APlayer.min.js"></script>
 </head>
 <body>
-  hello world
+  <div id="player1" class="aplayer"></div>
+
+
+  <script>
+    var ap = new APlayer({
+    element: document.getElementById('player1'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    music: {
+        title: 'Preparation',
+        author: 'Hans Zimmer/Richard Harvey',
+        url: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.mp3',
+        pic: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.jpg'
+    }
+    });
+    ap.init();
+  </script>
 </body>
 </html>
